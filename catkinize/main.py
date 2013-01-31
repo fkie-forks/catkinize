@@ -185,5 +185,5 @@ def perform_changes(changeset):
             if not os.path.isdir(os.path.dirname(newfile)):
                 os.mkdir(os.path.dirname(newfile))
             with open(newfile, "w") as fhand:
-                fhand.write(content)
+                fhand.write(content.encode('utf-8'))
                 print("Wrote new file %s" % newfile)
